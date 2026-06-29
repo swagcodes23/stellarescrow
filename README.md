@@ -288,36 +288,26 @@ Key responsive patterns:
 
 ### 🖥️ Application UI (Desktop)
 
-<img width="1920" height="1080" alt="Screenshot (302)" src="https://github.com/user-attachments/assets/ee576f07-ac62-4aed-a636-1e16e9babd0b" />
+<img width="1920" height="1080" alt="Screenshot (315)" src="https://github.com/user-attachments/assets/55b08094-3f75-43a9-9c9e-beb252ec02d8" />
 
-<!-- Add more desktop screenshots below -->
-<!-- ![Dashboard View](screenshots/desktop-dashboard.png) -->
-<!-- ![Escrow Interaction](screenshots/desktop-escrow.png) -->
+
+
 
 ### 📱 Mobile UI
 
-<!-- Upload your mobile screenshots and replace the placeholders below -->
-<!-- ![Mobile - Wallet Connection](screenshots/mobile-wallet.png) -->
-<!-- ![Mobile - Deposit Form](screenshots/mobile-deposit.png) -->
-<!-- ![Mobile - Landlord Actions](screenshots/mobile-landlord.png) -->
+
 
 
 ### 🧪 Test Output
 
- 
-<img width="857" height="197" alt="image" src="https://github.com/user-attachments/assets/094afa7c-74e2-48ed-a6f2-2c9baa1c7082" />
+ <img width="857" height="197" alt="Screenshot 2026-06-28 215617" src="https://github.com/user-attachments/assets/277ac5bf-a47f-4c9a-8d1b-72970c61847b" />
 
-<img width="665" height="278" alt="image" src="https://github.com/user-attachments/assets/ec2f04e9-f6c9-4499-9afa-03a7911d2da3" />
+ <img width="665" height="278" alt="Screenshot 2026-06-28 215738" src="https://github.com/user-attachments/assets/27229662-43d5-4d4f-8dba-394f321e9492" />
 
 
 
 ### ⚙️ CI/CD Pipeline
 
-<!-- Upload your CI/CD pipeline screenshots below -->
-<!-- ![GitHub Actions - Pipeline Overview](screenshots/cicd-pipeline.png) -->
-<!-- ![GitHub Actions - All Jobs Passing](screenshots/cicd-all-green.png) -->
-
-> **To add screenshots:** Navigate to [GitHub Actions](https://github.com/swagcodes23/stellarescrow/actions) and capture screenshots of the passing pipeline.
 
 ## License
 
