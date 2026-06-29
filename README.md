@@ -281,7 +281,7 @@ Key responsive patterns:
 | **Network** | Stellar Testnet |
 | **Escrow Contract Address** | `CDTQUZTEFN3GWEPKRCRD4ABGMYIZUQDSLEL6SF4SSO4EJGQVXTC7QXBV` |
 | **Native Token (SAC)** | `CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC` |
-| **Transaction Hash** | `6845c8af461e1faa49f59a141d227b35d77f10cf19083499ff164f57cca7380d |
+| **Transaction Hash** | 6845c8af461e1faa49f59a141d227b35d77f10cf19083499ff164f57cca7380d |
 | **Live URL** | https://stellarescrow.vercel.app |
 | **Explorer** | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CDTQUZTEFN3GWEPKRCRD4ABGMYIZUQDSLEL6SF4SSO4EJGQVXTC7QXBV) |
 
