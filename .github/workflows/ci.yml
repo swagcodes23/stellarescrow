@@ -1,0 +1,82 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  # ──────────────────────────────────────────────
+  # Job 1: Smart Contract — Build & Test (Rust)
+  # ──────────────────────────────────────────────
+  contract-tests:
+    name: 🦀 Smart Contract Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: my-soroban-contract
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown,wasm32v1-none
+
+      - name: Cache Cargo registry & build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            my-soroban-contract/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('my-soroban-contract/Cargo.lock') }}
+          restore-keys: ${{ runner.os }}-cargo-
+
+      - name: Remove local cargo config (rust-lld not available on CI)
+        run: rm -f .cargo/config.toml
+
+      - name: Run contract tests
+        run: cargo test --verbose
+
+      - name: Install Stellar CLI
+        uses: stellar/stellar-cli@v27.0.0
+
+      - name: Build contract (WASM)
+        run: stellar contract build
+
+  # ──────────────────────────────────────────────
+  # Job 2: Frontend — Lint, Test & Build (React)
+  # ──────────────────────────────────────────────
+  frontend-tests:
+    name: ⚛️ Frontend Tests & Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run frontend tests
+        run: npm test -- --watchAll=false --ci
+        env:
+          CI: true
+
+      - name: Build production bundle
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-build
+          path: build/
+          retention-days: 7
