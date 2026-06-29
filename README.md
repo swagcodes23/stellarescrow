@@ -282,7 +282,7 @@ Key responsive patterns:
 | **Escrow Contract Address** | `CDTQUZTEFN3GWEPKRCRD4ABGMYIZUQDSLEL6SF4SSO4EJGQVXTC7QXBV` |
 | **Native Token (SAC)** | `CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC` |
 | **Transaction Hash** | `e7e221d8b67eb40b49f9df8811d51de5a7bbbc6b3beea0d366d51c368d184400` (Sample Deposit) |
-| **Live URL** | [https://rental-deposit-escrow.vercel.app](https://rental-deposit-escrow.vercel.app) |
+| **Live URL** | [https://rental-deposit-escrow.vercel.app][(https://stellarescrow.vercel.app/) |
 | **Explorer** | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CDTQUZTEFN3GWEPKRCRD4ABGMYIZUQDSLEL6SF4SSO4EJGQVXTC7QXBV) |
 
 ## Screenshots
