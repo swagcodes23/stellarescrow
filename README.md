@@ -4,7 +4,7 @@
 
 **StellarEscrow** is a fully decentralized, full-stack application for managing rental security deposits. Built with a React frontend and powered by Soroban smart contracts on the Stellar network, this dApp provides a secure, trustless, and immutable way to lock and release rental deposits between landlords and tenants.
 
-🔗 **Live Demo:** [https://rental-deposit-escrow.vercel.app](https://rental-deposit-escrow.vercel.app)
+🔗 **Live Demo:** https://stellarescrow.vercel.app/
 
 ---
 
