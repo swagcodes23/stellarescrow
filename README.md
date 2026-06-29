@@ -308,6 +308,8 @@ Key responsive patterns:
 
 ### ⚙️ CI/CD Pipeline
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5c93878a-970d-46e7-a8f0-53eb97855472" />
+
 
 ## License
 
