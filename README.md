@@ -291,18 +291,16 @@ Key responsive patterns:
 <img width="1920" height="1080" alt="Screenshot (315)" src="https://github.com/user-attachments/assets/55b08094-3f75-43a9-9c9e-beb252ec02d8" />
 
 
-
-
-### 📱 Mobile UI
-
-
-
-
 ### 🧪 Test Output
 
  <img width="857" height="197" alt="Screenshot 2026-06-28 215617" src="https://github.com/user-attachments/assets/277ac5bf-a47f-4c9a-8d1b-72970c61847b" />
 
  <img width="665" height="278" alt="Screenshot 2026-06-28 215738" src="https://github.com/user-attachments/assets/27229662-43d5-4d4f-8dba-394f321e9492" />
+
+ ### 📱 Mobile UI
+
+ <img width="1068" height="2260" alt="image" src="https://github.com/user-attachments/assets/775f6930-78c7-49a9-8ce5-494f0f7f627c" />
+
 
 
 
