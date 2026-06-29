@@ -15,6 +15,7 @@ jest.mock('./Freighter', () => ({
 describe('EscrowInteraction Component', () => {
   const defaultProps = {
     publicKey: 'GABCDEFGHIJKLMNOP',
+    balance: '100',
     setBalance: jest.fn(),
     walletType: 'freighter',
   };

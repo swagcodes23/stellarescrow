@@ -210,7 +210,7 @@ function App() {
             ESCROW INTERACTION (Functional Component)
         ═══════════════════════════════════════════ */}
         <section className="bg-white">
-          <EscrowInteraction publicKey={publicKey} setBalance={setBalance} walletType={walletType} />
+          <EscrowInteraction publicKey={publicKey} balance={balance} setBalance={setBalance} walletType={walletType} />
         </section>
 
         {/* ═══════════════════════════════════════════

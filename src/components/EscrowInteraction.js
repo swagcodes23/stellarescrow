@@ -32,7 +32,7 @@ const StatusAlert = ({ status, type }) => {
   );
 };
 
-const EscrowInteraction = ({ publicKey, setBalance, walletType }) => {
+const EscrowInteraction = ({ publicKey, balance, setBalance, walletType }) => {
   const [landlord, setLandlord] = useState('');
   const [amount, setAmount] = useState('');
   const [status, setStatus] = useState('');
@@ -193,7 +193,7 @@ const EscrowInteraction = ({ publicKey, setBalance, walletType }) => {
           <div className="bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl shadow-lg p-6 md:p-8 text-white">
             <p className="text-sm font-medium text-orange-100 mb-1">Your Balance</p>
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-bold tracking-tight">2,500</span>
+              <span className="text-4xl font-bold tracking-tight">{balance ? Number(balance).toLocaleString(undefined, { maximumFractionDigits: 2 }) : '0'}</span>
               <span className="text-lg font-medium text-orange-200">XLM</span>
             </div>
             <div className="mt-4 pt-4 border-t border-orange-300/30">
