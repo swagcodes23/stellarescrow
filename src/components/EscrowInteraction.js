@@ -62,7 +62,14 @@ const EscrowInteraction = ({ publicKey, balance, setBalance, walletType }) => {
     try {
       const hash = await depositEscrow(walletType, publicKey, landlord, amount);
       setStatusType('success');
-      setStatus(`Deposit successful! Tx Hash: ${hash}`);
+      setStatus(
+        <span>
+          Deposit successful! Tx Hash:{' '}
+          <a href={`https://stellar.expert/explorer/testnet/tx/${hash}`} target="_blank" rel="noopener noreferrer" className="underline hover:text-orange-600 font-bold">
+            {hash.substring(0, 8)}...{hash.substring(hash.length - 8)}
+          </a>
+        </span>
+      );
       updateBalance();
     } catch (e) {
       console.error(e);
@@ -83,7 +90,14 @@ const EscrowInteraction = ({ publicKey, balance, setBalance, walletType }) => {
     try {
       const hash = await releaseEscrow(walletType, publicKey);
       setStatusType('success');
-      setStatus(`Escrow released successfully! Tx Hash: ${hash}`);
+      setStatus(
+        <span>
+          Escrow released successfully! Tx Hash:{' '}
+          <a href={`https://stellar.expert/explorer/testnet/tx/${hash}`} target="_blank" rel="noopener noreferrer" className="underline hover:text-orange-600 font-bold">
+            {hash.substring(0, 8)}...{hash.substring(hash.length - 8)}
+          </a>
+        </span>
+      );
       updateBalance();
     } catch (e) {
       console.error(e);
@@ -104,7 +118,14 @@ const EscrowInteraction = ({ publicKey, balance, setBalance, walletType }) => {
     try {
       const hash = await refundEscrow(walletType, publicKey);
       setStatusType('success');
-      setStatus(`Escrow refunded successfully! Tx Hash: ${hash}`);
+      setStatus(
+        <span>
+          Escrow refunded successfully! Tx Hash:{' '}
+          <a href={`https://stellar.expert/explorer/testnet/tx/${hash}`} target="_blank" rel="noopener noreferrer" className="underline hover:text-orange-600 font-bold">
+            {hash.substring(0, 8)}...{hash.substring(hash.length - 8)}
+          </a>
+        </span>
+      );
       updateBalance();
     } catch (e) {
       console.error(e);
