@@ -6,6 +6,14 @@
 
 🔗 **Live Demo:** https://stellarescrow.vercel.app/
 
+🎬 Demo Video
+
+
+
+https://github.com/user-attachments/assets/433431cd-7a4f-490a-b269-0d0d39dcf3fb
+
+
+
 ---
 
 ## Table of Contents
