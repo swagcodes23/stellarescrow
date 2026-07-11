@@ -31,6 +31,10 @@ jest.mock('@stellar/stellar-sdk', () => ({
   nativeToScVal: jest.fn(),
 }));
 
+jest.mock('@vercel/analytics/react', () => ({
+  Analytics: () => null,
+}), { virtual: true });
+
 describe('App Component', () => {
   test('renders the app title', () => {
     render(<App />);
