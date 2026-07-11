@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Header from "./components/Header";
 import EscrowInteraction from "./components/EscrowInteraction";
+import TransactionCenter from "./components/TransactionCenter";
 import EventFeed from "./components/EventFeed";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { checkConnection, retrievePublicKey, getBalance } from './components/Freighter';
@@ -214,6 +215,13 @@ function App() {
         </section>
 
         {/* ═══════════════════════════════════════════
+            TRANSACTION CENTER
+        ═══════════════════════════════════════════ */}
+        <section className="bg-gray-50 border-t border-gray-100">
+          <TransactionCenter />
+        </section>
+
+        {/* ═══════════════════════════════════════════
             TRADITIONAL ESCROW IS BROKEN
         ═══════════════════════════════════════════ */}
         <section className="py-16 md:py-24 bg-gray-50">
@@ -270,7 +278,7 @@ function App() {
         {/* ═══════════════════════════════════════════
             EVENT FEED
         ═══════════════════════════════════════════ */}
-        <section className="bg-white py-8">
+        <section id="event-feed" className="bg-white py-8">
           <div className="max-w-4xl mx-auto px-4 md:px-8">
             <EventFeed />
           </div>

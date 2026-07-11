@@ -25,6 +25,7 @@ const Header = ({ connected, publicKey, balance, handleConnect, handleDisconnect
           <a href="#hero" className="text-sm font-medium text-gray-600 hover:text-orange-500 transition-colors">Home</a>
           <a href="#features" className="text-sm font-medium text-gray-600 hover:text-orange-500 transition-colors">About</a>
           <a href="#how-it-works" className="text-sm font-medium text-gray-600 hover:text-orange-500 transition-colors">How it Works</a>
+          <a href="#tx-center" className="text-sm font-semibold text-orange-500 hover:text-orange-600 transition-colors">Tx Center</a>
         </nav>
 
         {/* Wallet Section */}

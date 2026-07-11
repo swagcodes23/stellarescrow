@@ -48,6 +48,11 @@ html {
   animation: slideUp 0.5s ease-out;
 }
 
+/* ─── Transaction Card Animation ─── */
+.tx-card {
+  animation: fadeIn 0.4s ease-out both;
+}
+
 /* ─── Wallet Section Responsive ─── */
 @media (max-width: 768px) {
   .wallet-section {

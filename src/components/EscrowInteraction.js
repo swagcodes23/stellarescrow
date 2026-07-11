@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { depositEscrow, releaseEscrow, refundEscrow } from './Soroban';
 import { getBalance } from './Freighter';
+import { saveTx } from './TransactionCenter';
 
 const Spinner = () => (
   <svg className="animate-spin h-5 w-5 text-white inline-block mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -61,6 +62,15 @@ const EscrowInteraction = ({ publicKey, balance, setBalance, walletType }) => {
     
     try {
       const hash = await depositEscrow(walletType, publicKey, landlord, amount);
+      saveTx({
+        type: 'deposit',
+        hash,
+        status: 'success',
+        timestamp: new Date().toISOString(),
+        trackId: hash?.substring(0, 6),
+        amount,
+        walletType,
+      });
       setStatusType('success');
       setStatus(
         <span>
@@ -89,6 +99,14 @@ const EscrowInteraction = ({ publicKey, balance, setBalance, walletType }) => {
     
     try {
       const hash = await releaseEscrow(walletType, publicKey);
+      saveTx({
+        type: 'release',
+        hash,
+        status: 'success',
+        timestamp: new Date().toISOString(),
+        trackId: hash?.substring(0, 6),
+        walletType,
+      });
       setStatusType('success');
       setStatus(
         <span>
@@ -117,6 +135,14 @@ const EscrowInteraction = ({ publicKey, balance, setBalance, walletType }) => {
     
     try {
       const hash = await refundEscrow(walletType, publicKey);
+      saveTx({
+        type: 'refund',
+        hash,
+        status: 'success',
+        timestamp: new Date().toISOString(),
+        trackId: hash?.substring(0, 6),
+        walletType,
+      });
       setStatusType('success');
       setStatus(
         <span>
