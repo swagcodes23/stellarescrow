@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Header = ({ connected, publicKey, balance, handleConnect, handleDisconnect }) => {
 
@@ -6,6 +6,8 @@ const Header = ({ connected, publicKey, balance, handleConnect, handleDisconnect
     if (!key) return "";
     return `${key.slice(0, 4)}...${key.slice(-4)}`;
   };
+
+  const [copied, setCopied] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
@@ -49,11 +51,31 @@ const Header = ({ connected, publicKey, balance, handleConnect, handleDisconnect
             </div>
           ) : (
             <div className="wallet-info flex items-center gap-3">
-              <div className="flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200">
+              <div className="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                <span className="text-gray-700 font-mono text-xs">
+                <span className="text-gray-700 font-mono text-xs" title={publicKey}>
                   {formatPublicKey(publicKey)}
                 </span>
+                <button
+                  id="btn-copy-address"
+                  onClick={() => {
+                    navigator.clipboard.writeText(publicKey);
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 2000);
+                  }}
+                  className="ml-0.5 p-1 rounded-md hover:bg-gray-200 transition-colors group"
+                  title="Copy wallet address"
+                >
+                  {copied ? (
+                    <svg className="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  ) : (
+                    <svg className="w-3.5 h-3.5 text-gray-400 group-hover:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  )}
+                </button>
               </div>
               <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1.5 rounded-full border border-orange-200">
                 💰 {balance} XLM
