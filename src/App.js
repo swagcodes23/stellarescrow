@@ -7,6 +7,7 @@ import EventFeed from "./components/EventFeed";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { checkConnection, retrievePublicKey, getBalance } from './components/Freighter';
 import { retrievePublicKeyAlbedo } from './components/Albedo';
+import { Analytics } from "@vercel/analytics/react";
 
 /* ─── FAQ Accordion Item ─── */
 const FAQItem = ({ question, answer }) => {
@@ -362,6 +363,7 @@ function App() {
           </div>
         </footer>
       </div>
+      <Analytics />
     </ErrorBoundary>
   );
 }
